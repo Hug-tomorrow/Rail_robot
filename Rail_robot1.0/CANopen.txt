@@ -1,0 +1,25 @@
+	
+	Initializing	初始化状态，设备启动时自动进入此状态。
+	Pre-operational	预操作状态，设备初始化完成后自动进入此状态。在此状态下，可以发送 SDO 消息，但不能发送 PDO 消息。
+	Operational	操作状态，设备在此状态下可以正常通信，发送和接收 PDO 消息。
+	Stopped	停止状态，在此状态下，设备只能接收 NMT 消息和错误控制消息。
+	
+	NMT 协议：NMT 协议用于控制 CANopen 设备的状态机，通过发送特定的命令码来改变设备的状态。
+	命令格式：NMT 命令是一个 CAN 帧，其 CAN-ID 为 0x00，数据长度为 2 字节。第一个字节是命令码，第二个字节是目标节点 ID（0 表示广播）。
+		0x01	Start_Remote_Node	     启动远程节点，使节点进入操作状态（Operational）。
+		0x02	Stop_Remote_Node	     停止远程节点，使节点进入停止状态（Stopped）。
+		0x80	Enter_Pre-Operational	 使节点进入预操作状态（Pre-operational）。
+		0x81	Reset_Node	           复位节点，使节点重新初始化。
+		0x82	Reset_Communication	   复位通信，使节点的通信参数恢复到默认值。
+		
+		
+		操作流程：
+		1、复位节点
+		2、SDO设置参数
+		3、启动远程节点
+		4、SDO状态机：准备继电器吸合
+		5、SDO状态机：继电器吸合
+		6、SDO状态机：电机使能
+		7、PDO发送实时控制命令
+		8、SDO状态机：电机去使能
+		9、SDO状态机：准备继电器吸合

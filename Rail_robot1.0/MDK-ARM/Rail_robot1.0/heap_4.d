@@ -1,0 +1,13 @@
+rail_robot1.0\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+rail_robot1.0\heap_4.o: E:\MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+rail_robot1.0\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+rail_robot1.0\heap_4.o: E:\MDK\ARM\ARMCC\Bin\..\include\stddef.h
+rail_robot1.0\heap_4.o: E:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+rail_robot1.0\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
+rail_robot1.0\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+rail_robot1.0\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+rail_robot1.0\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+rail_robot1.0\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+rail_robot1.0\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+rail_robot1.0\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+rail_robot1.0\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
